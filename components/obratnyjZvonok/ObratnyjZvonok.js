@@ -3,7 +3,7 @@ import FormOrder from "../Form/FormOrder"
 
 const ObratnyjZvonok = () => {
 	return (
-		<section className="bg-gradient-to-r from-orange-600 to-orange-400 py-10">
+		<section className="bg-gradient-to-r from-orange-600 to-orange-400 sd:py-20 xz:py-10">
 			<div className='container mx-auto sd:flex justify-between items-center xz:flex-row'>
 				<div className='text-white sd:w-1/2 xz:w-full'>
 					<p className='font-bold text-2xl'>

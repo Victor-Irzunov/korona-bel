@@ -9,6 +9,13 @@ const RunningText = () => {
 					<span className="sd:mx-24 xz:mx-6">Снегоуборщики</span>
 					<span className="sd:mx-24 xz:mx-6">KORONA</span>
 					<span className="sd:mx-24 xz:mx-6">Генераторы</span>
+
+					<span className="sd:mx-24 xz:mx-6">KORONA</span>
+					<span className="sd:mx-24 xz:mx-6">Мотоблоки</span>
+					<span className="sd:mx-24 xz:mx-6">KORONA</span>
+					<span className="sd:mx-24 xz:mx-6">Снегоуборщики</span>
+					<span className="sd:mx-24 xz:mx-6">KORONA</span>
+					<span className="sd:mx-24 xz:mx-6">Генераторы</span>
 				</div>
 			</div>
 		</div>

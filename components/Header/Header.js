@@ -157,7 +157,7 @@ export default function Header() {
 								8:30-18:00
 							</p>
 							<p className=''>
-								Без выходных
+								Выходной: <span className='text-red-500'>СБ</span>-<span className='text-red-500'>ВС</span>
 							</p>
 						</div>
 						{/* <div className="dropdown dropdown-end">
@@ -173,18 +173,20 @@ export default function Header() {
 
 						<div className='flex flex-col'>
 							<a href='tel:80293084904'
-								className='link link-hover'
+								className='link link-hover flex'
 								onClick={() => gtag_report_conversion('/')}
 
 							>
 								+375 29 308-49-04
+								<Image src='/a1.svg' alt='Телефон оператора А1' width={15} height={15} className='ml-1.5 sd:block xz:hidden' />
 							</a>
 							<a href='tel:80173099381'
-								className='link link-hover'
+								className='link link-hover flex'
 								onClick={() => gtag_report_conversion('/')}
 
 							>
 								+375 17 309-93-81
+								<Image src='/phone.svg' alt='Телефон оператора А1' width={18} height={18} className='ml-2 sd:block xz:hidden' />
 							</a>
 						</div>
 

@@ -1,3 +1,5 @@
+import FormOrder from "@/components/Form/FormOrder";
+import BtnComp from "@/components/btn/BtnComp";
 import Catalog from "@/components/catalog/Catalog";
 import Garantiya from "@/components/garantiya/Garantiya";
 import ObratnyjZvonok from "@/components/obratnyjZvonok/ObratnyjZvonok";
@@ -16,7 +18,7 @@ export default function Home() {
               Мы предлагаем высококачественные мотоблоки, снегоуборщики и генераторы от ведущего производителя KORONA.
               Наши продукты отличаются надежностью и производительностью, гарантируя вам эффективное решение для различных задач.
             </p>
-            <button className="btn bg-orange-500 border-orange-500 text-white mt-5">Заказать звонок</button>
+            <BtnComp />
           </div>
 
         </div>
@@ -75,6 +77,23 @@ export default function Home() {
       <Garantiya />
 
       <ObratnyjZvonok />
+
+
+
+      <dialog id="my_modal_1" className="modal">
+        <div className="modal-box overflow-x-hidden">
+          <form method="dialog">
+            {/* if there is a button in form, it will close the modal */}
+            <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
+          </form>
+          <h3 className="font-bold text-lg">Заказать звонок</h3>
+          <p className="py-4 text-sm text-gray-400">Пожалуйста введите свой номер телефона и мы вам перезвоним в ближайшее время</p>
+
+          <div className="modal-action">
+            <FormOrder zvonok />
+          </div>
+        </div>
+      </dialog>
 
     </main>
   )

@@ -48,7 +48,7 @@ const ImgProductDetails = ({ product }) => {
 			</div>
 
 			<div className="flex-1">
-				<h2 className="font-medium text-3xl mb-4">{name}</h2>
+				<h2 className="font-medium sd:text-3xl xz:text-2xl mb-6">{name}</h2>
 				{/* <p className="text-sm">
 					Бренд:{" "}
 
@@ -92,7 +92,7 @@ const ImgProductDetails = ({ product }) => {
 					</ul>
 				</div>
 
-				<FormOrder />
+				<FormOrder product={name} />
 
 				<div className="pt-4 flex items-center gap-3 text-sm text-gray-500">
 					<RiShieldCheckFill fontSize={22} />

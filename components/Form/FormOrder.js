@@ -3,7 +3,7 @@ import { sendOrderTelegram } from '@/http/telegramAPI';
 import { useState } from 'react';
 import InputMask from 'react-input-mask'
 
-const FormOrder = ({zvonok}) => {
+const FormOrder = ({ zvonok, product }) => {
 	const [isActive, setIsActive] = useState(false)
 	const [tel, setTel] = useState('')
 	const [formData, setFormData] = useState({
@@ -16,7 +16,8 @@ const FormOrder = ({zvonok}) => {
 
 		const telWithoutSpaces = tel.replace(/\s/g, '');
 
-		let messageForm = `<b>Заказ с сайта Холдинг:</b>\n`;
+		let messageForm = `<b>Клиент с сайта Холдинг ${zvonok ? 'Просит перезвонить' : 'Хочет купить'}:</b>\n`;
+		messageForm += `<b>${product || ''}</b>\n`;
 		messageForm += `<b>--------------- </b>\n`;
 		messageForm += `<b>Телефон:</b> <a href="tel:${telWithoutSpaces}">${tel}</a>\n`;
 		messageForm += `<b>--------------- </b>\n`;
@@ -26,7 +27,12 @@ const FormOrder = ({zvonok}) => {
 		sendOrderTelegram(messageForm)
 			.then(data => {
 				if (data.ok) {
-
+					setTel('');
+					document.getElementById("my_modal_1").close();
+					document.getElementById('my_modal_3').showModal()
+					setTimeout(() => {
+						document.getElementById('my_modal_3').close()
+					}, 3000)
 				}
 			});
 	};
@@ -72,7 +78,7 @@ const FormOrder = ({zvonok}) => {
 								<span className="label-text-alt">Обязательное поле</span>
 							</label> */}
 							<InputMask
-								placeholder="Введите ваш номер телефона"
+								placeholder="Введите ваш телефон"
 								mask="8\0\ 99 9999999"
 								maskChar={'-'}
 								className="input input-bordered join-item sd:w-80 xz:w-auto xy:w-60 text-sm"
@@ -84,13 +90,24 @@ const FormOrder = ({zvonok}) => {
 						</div>
 						<div className="form-control">
 							<button className="btn join-item bg-orange-500 border-orange-500 text-white" type="submit">
-								{zvonok ? 'Заказать звонок': 'Купить'}
+								{zvonok ? 'Заказать звонок' : 'Купить'}
 							</button>
 						</div>
 					</div>
 				</form>
 			</div>
 
+
+			<dialog id="my_modal_3" className="modal">
+				<div className="modal-box">
+					<form method="dialog">
+						{/* if there is a button in form, it will close the modal */}
+						<button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
+					</form>
+					<h3 className="font-bold text-lg">Ваш запрос принят</h3>
+					<p className="py-4">Мы вам перезвоним в ближайшее время.</p>
+				</div>
+			</dialog>
 		</>
 	);
 };

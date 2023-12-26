@@ -56,7 +56,7 @@ export default function Home() {
 
       </div>
 
-      <div className='bg-gradient-to-r from-orange-600 to-orange-400 py-10 relative'>
+      {/* <div className='bg-gradient-to-r from-orange-600 to-orange-400 py-10 relative'>
         <p className='text-center text-white uppercase text-4xl font-extrabold sd:w-[30%] xz:w-full mx-auto xz:px-5 sd:px-0 shadow-text'>
           Получи 2 подарка при покупке мотоблока
         </p>
@@ -69,7 +69,7 @@ export default function Home() {
           alt='Получи 2 подарка' width={130} height={130}
           className="absolute top-1/2 right-16 -translate-y-1/2 sd:block xz:hidden"
         />
-      </div>
+      </div> */}
 
 
       <Catalog />

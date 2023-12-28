@@ -154,7 +154,7 @@ export default function Header() {
 								Режим работы:
 							</p>
 							<p className=''>
-								8:30-18:00
+								8:30-17:15
 							</p>
 							<p className=''>
 								Выходной: <span className='text-red-500'>СБ</span>-<span className='text-red-500'>ВС</span>

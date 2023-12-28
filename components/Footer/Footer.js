@@ -84,6 +84,17 @@ export default function Footer() {
 							+375 17 309-93-81
 						</a>
 					</div>
+					<div className='mt-5'>
+						<p className='font-semibold'>
+							Режим работы:
+						</p>
+						<p className=''>
+							8:30-17:15
+						</p>
+						<p className=''>
+							Выходной: <span className='text-red-500'>СБ</span>-<span className='text-red-500'>ВС</span>
+						</p>
+					</div>
 				</nav>
 
 				<aside className='my-6'>
@@ -96,14 +107,17 @@ export default function Footer() {
 					<p className=''>
 						УНП 192745992
 					</p>
-					<p className='mt-5 text-lg font-semibold'>
+					<p className='mt-5 text-lg font-semibold uppercase'>
 						Адрес салона минитехники
 					</p>
 					<p className='mt-2 font-bold text-xl'>
 						г.Минск, пр.Жукова 44,5-1, ТЦ "Аутлето"
 					</p>
 				</aside>
+			</div>
+			<iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A48422403e419eaf4cdfb98ae32f9b3e9f26f52f234de224073682756feede64e&amp;source=constructor" width="100%" height="400" frameBorder="0"></iframe>
 
+			<div className='container mx-auto'>
 				<aside className="border-t pt-2">
 					<p className='text-gray-800 xs:text-xs xz:text-[10px] font-light leading-3' >
 

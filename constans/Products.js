@@ -10,6 +10,8 @@ export const product = [
 					{
 						id: 1,
 						name: 'M-107',
+						price: 1135,
+						discount:10,
 						images: [
 							'/product/motobloki/m-107-1.webp',
 							'/product/motobloki/m-107-2.webp',
@@ -33,6 +35,8 @@ export const product = [
 					{
 						id: 2,
 						name: 'M-207',
+						price: 1176,
+						discount:15,
 						images: [
 							'/product/motobloki/m-207-1.webp',
 							'/product/motobloki/m-207-2.webp',
@@ -78,6 +82,8 @@ export const product = [
 					{
 						id: 4,
 						name: 'M-307',
+						price: 1236,
+						discount:15,
 						images: [
 							'/product/motobloki/m-307-1.webp',
 							'/product/motobloki/m-307-2.webp',
@@ -107,6 +113,8 @@ export const product = [
 					{
 						id: 1,
 						name: 'M-227',
+						price: 1424,
+						discount:10,
 						images: [
 							'/product/motobloki/m-227-1.webp',
 							'/product/motobloki/m-227-2.webp',
@@ -130,6 +138,8 @@ export const product = [
 					{
 						id: 2,
 						name: 'M-327',
+						price: 1404,
+						discount:10,
 						images: [
 							'/product/motobloki/m-327-1.webp',
 							'/product/motobloki/m-327-2.webp',
@@ -153,6 +163,8 @@ export const product = [
 					{
 						id: 3,
 						name: 'X-107',
+						price: 1206,
+						discount:0,
 						images: [
 							'/product/motobloki/x-107-1.webp',
 							'/product/motobloki/x-107-2.webp',
@@ -274,6 +286,8 @@ export const product = [
 					{
 						id: 4,
 						name: 'X-523',
+						price: 2466,
+						discount:10,
 						images: [
 							'/product/motobloki/x-523-1.webp',
 							'/product/motobloki/x-523-2.webp',
@@ -332,6 +346,8 @@ export const product = [
 					{
 						id: 1,
 						name: 'CШР-256',
+						price: 1782,
+						discount:15,
 						images: [
 							'/product/snegouborshiki/s-256-1.webp',
 							'/product/snegouborshiki/s-256-2.webp',
@@ -369,6 +385,8 @@ export const product = [
 					{
 						id: 2,
 						name: 'CШР-361',
+						price: 1866,
+						discount:12,
 						images: [
 							'/product/snegouborshiki/s-361-1.webp',
 							'/product/snegouborshiki/s-361-2.webp',
@@ -406,6 +424,8 @@ export const product = [
 					{
 						id: 3,
 						name: 'CШР-472',
+						price: 2268,
+						discount:10,
 						images: [
 							'/product/snegouborshiki/s-472-1.webp',
 							'/product/snegouborshiki/s-472-2.webp',
@@ -455,6 +475,8 @@ export const product = [
 					{
 						id: 1,
 						name: 'БГУ-5500',
+						price: 0,
+						discount:0,
 						images: [
 							'/product/generatory/g-5500-1.webp',
 						],
@@ -473,6 +495,8 @@ export const product = [
 					{
 						id: 2,
 						name: 'БГУ-6500',
+						price: 0,
+						discount:0,
 						images: [
 							'/product/generatory/g-1.webp',
 						],
@@ -491,6 +515,8 @@ export const product = [
 					{
 						id: 3,
 						name: 'БГУ-7000',
+						price: 0,
+						discount:0,
 						images: [
 							'/product/generatory/g-1.webp',
 						],
@@ -509,6 +535,8 @@ export const product = [
 					{
 						id: 4,
 						name: 'БГУ-8000',
+						price: 0,
+						discount:0,
 						images: [
 							'/product/generatory/g-8000-1.webp',
 						],
@@ -527,6 +555,8 @@ export const product = [
 					{
 						id: 5,
 						name: 'ПБГУ-3500',
+						price: 0,
+						discount:0,
 						images: [
 							'/product/generatory/g-1.webp',
 						],
@@ -545,6 +575,8 @@ export const product = [
 					{
 						id: 6,
 						name: 'ПБГУ-7500',
+						price: 0,
+						discount:0,
 						images: [
 							'/product/generatory/g-1.webp',
 						],

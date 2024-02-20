@@ -3,10 +3,11 @@ import Link from "next/link";
 import { useState } from "react";
 import { RiAddFill, RiCheckboxCircleFill, RiShieldCheckFill, RiSubtractFill } from "react-icons/ri"
 import FormOrder from "../Form/FormOrder";
+import Image from "next/image";
 
 
 const ImgProductDetails = ({ product }) => {
-	const { id, name, images, alt, description } = product
+	const { id, name, images, alt, description, price, discount } = product
 	const [selectedImageIndex, setSelectedImageIndex] = useState(0);
 	const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -54,13 +55,27 @@ const ImgProductDetails = ({ product }) => {
 
 				</p>
 				<div className="pb-3 pt-1 text-sm text-gray-400">На складе: </div>
-				<div className="pb-3 pt-1 text-sm text-gray-400">Артикль: </div>
+				<div className="pb-3 pt-1 text-sm text-gray-400">Артикль: </div> */}
 				<div className="pt-1 flex items-center gap-3">
-					<strong className="text-2xl font-medium text-gray-800">руб</strong>
-					<span className="font-medium text-gray-500 line-through"> руб</span>
-					<span className="text-green-500 text-sm font-semibold">%</span>
-				</div> */}
-				<div className="flex items-center gap-2">
+					{
+						price ?
+							<strong className="text-2xl font-medium text-gray-800">{price} руб</strong>
+							:
+							<div className="badge badge-accent badge-outline pl-1.5 mt-3">
+								 Уточняйте цену
+							</div>
+					}
+					{
+						discount ? <span className="font-medium text-gray-500 line-through">{(price / 100 * discount) + price} руб</span>
+							: null
+					}
+					{
+						discount ?
+							<span className="text-green-500 text-sm font-semibold">-{discount}%</span>
+							: null
+					}
+				</div>
+				<div className="flex items-center gap-2 mt-4">
 					<div className="rating rating-sm disabled">
 						{[1, 2, 3, 4, 5].map((rating) => (
 							<input
@@ -81,7 +96,7 @@ const ImgProductDetails = ({ product }) => {
 				<div className="py-4 max-w-lg">
 					<ul className='text-sm'>
 						{
-							description.map((el,idx) => {
+							description.map((el, idx) => {
 								return (
 									<li className='' key={idx}>
 										{el}

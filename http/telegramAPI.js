@@ -1,7 +1,9 @@
 import axios from 'axios'
 
-const token = '5562126487:AAGqX2TBd3toX15OgSCQ2yW55RNfgtBWQko'
-const chat_id = '-1001794221917'
+// const token = '5562126487:AAGqX2TBd3toX15OgSCQ2yW55RNfgtBWQko'
+// const chat_id = '-1001794221917'
+const token = '6373010193:AAEUKd5Pq13sETu3_YWSUBDYfGMP1vjbukQ'
+const chat_id = '-1002064386419'
 
 const uri_api = `https://api.telegram.org/bot${token}/sendMessage`
 

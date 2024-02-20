@@ -100,11 +100,11 @@ const SliderComp = () => {
 									Сущиц Анатолий
 								</p>
 								<div className="rating">
-									<input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
-									<input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
-									<input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
-									<input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
-									<input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" checked />
+									<input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" onChange={()=>{}} />
+									<input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" onChange={()=>{}} />
+									<input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" onChange={()=>{}} />
+									<input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" onChange={()=>{}} />
+									<input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" onChange={()=>{}} checked />
 								</div>
 								<p className='xz:text-xs sd:text-sm mt-2'>
 									Я полностью удовлетворен своим приобретением генератора от KORONA. Он обеспечивает стабильное и надежное электроснабжение, что является ключевым фактором для эффективной работы моего дачного участка. Отличное качество и простота в использовании делают этот генератор отличным выбором для любого пользователя

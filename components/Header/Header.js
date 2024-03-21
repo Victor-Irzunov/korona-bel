@@ -22,7 +22,7 @@ export default function Header() {
 	// sticky top-0
 	return (
 		<header className='bg-base-100 
-		
+		sticky top-0
 		z-50'>
 			<RunningText />
 			<div className='container mx-auto'>
@@ -62,37 +62,41 @@ export default function Header() {
 									</LinkScroll>
 								</li>
 								<li>
-								<LinkScroll to='garantiya'
-									smooth={true}
-									offset={-100}
-									duration={800}
-									className="cursor-pointer"
-									rel="nofollow"
-									href='#/'
-								>
-									Гарантия
-								</LinkScroll>
+									<LinkScroll to='garantiya'
+										smooth={true}
+										offset={-100}
+										duration={800}
+										className="cursor-pointer"
+										rel="nofollow"
+										href='#/'
+									>
+										Гарантия
+									</LinkScroll>
 								</li>
 								<li>
-								<LinkScroll to='footer'
-									smooth={true}
-									offset={-100}
-									duration={800}
-									className="cursor-pointer"
-									rel="nofollow"
-									href='#/'
-								>
-									Контакты
-								</LinkScroll>
+									<LinkScroll to='footer'
+										smooth={true}
+										offset={-100}
+										duration={800}
+										className="cursor-pointer"
+										rel="nofollow"
+										href='#/'
+									>
+										Контакты
+									</LinkScroll>
 								</li>
 							</ul>
 						</div>
-						<Link
+						<LinkScroll to='main'
+							smooth={true}
+							offset={-100}
+							duration={800}
 							className="cursor-pointer"
-							href={`${process.env.NEXT_PUBLIC_BASE_URL}/`}
+							rel="nofollow"
+							href='#/'
 						>
 							<Image src='/logo/logo.webp' alt='логотип' width={200} height={46} />
-						</Link>
+						</LinkScroll>
 					</div>
 
 					<div className="navbar-center hidden lg:flex">
@@ -123,7 +127,7 @@ export default function Header() {
 							</li>
 
 							<li>
-							<LinkScroll to='garantiya'
+								<LinkScroll to='garantiya'
 									smooth={true}
 									offset={-100}
 									duration={800}
@@ -135,7 +139,7 @@ export default function Header() {
 								</LinkScroll>
 							</li>
 							<li>
-							<LinkScroll to='footer'
+								<LinkScroll to='footer'
 									smooth={true}
 									offset={-100}
 									duration={800}

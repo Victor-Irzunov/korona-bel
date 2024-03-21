@@ -113,7 +113,7 @@ export const product = [
 					{
 						id: 1,
 						name: 'M-227',
-						price: 1424,
+						price: 1404,
 						discount:10,
 						images: [
 							'/product/motobloki/m-227-1.webp',
@@ -138,7 +138,7 @@ export const product = [
 					{
 						id: 2,
 						name: 'M-327',
-						price: 1404,
+						price: 1424,
 						discount:10,
 						images: [
 							'/product/motobloki/m-327-1.webp',

@@ -1,9 +1,8 @@
 "use client"
-import Link from "next/link";
 import { useState } from "react";
-import { RiAddFill, RiCheckboxCircleFill, RiShieldCheckFill, RiSubtractFill } from "react-icons/ri"
+import { RiCheckboxCircleFill, RiShieldCheckFill } from "react-icons/ri"
 import FormOrder from "../Form/FormOrder";
-import Image from "next/image";
+import { BsChevronLeft, BsChevronRight } from "react-icons/bs"; 
 
 
 const ImgProductDetails = ({ product }) => {
@@ -25,6 +24,16 @@ const ImgProductDetails = ({ product }) => {
 		setIsModalOpen(false);
 	};
 
+	const handlePrevImage = () => {
+		const prevIndex = (selectedImageIndex - 1 + images.length) % images.length;
+		setSelectedImageIndex(prevIndex);
+	};
+
+	const handleNextImage = () => {
+		const nextIndex = (selectedImageIndex + 1) % images.length;
+		setSelectedImageIndex(nextIndex);
+	};
+
 	return (
 		<div className="bg-white p-6 rounded-lg border border-gray-300 flex sd:flex-row xz:flex-col gap-6">
 			<div>
@@ -42,7 +51,7 @@ const ImgProductDetails = ({ product }) => {
 							className="w-20 h-16 rounded border border-gray-300 overflow-hidden cursor-pointer"
 							onClick={() => handleImageClick(idx)}
 						>
-							<img src={img} alt="" className="w-full h-full object-cover" />
+							<img src={img} alt={name} className="w-full h-full object-cover" />
 						</div>
 					))}
 				</div>
@@ -50,29 +59,15 @@ const ImgProductDetails = ({ product }) => {
 
 			<div className="flex-1">
 				<h2 className="font-medium sd:text-3xl xz:text-2xl mb-6">{name}</h2>
-				{/* <p className="text-sm">
-					Бренд:{" "}
 
-				</p>
-				<div className="pb-3 pt-1 text-sm text-gray-400">На складе: </div>
-				<div className="pb-3 pt-1 text-sm text-gray-400">Артикль: </div> */}
 				<div className="pt-1 flex items-center gap-3">
 					{
 						price ?
 							<strong className="text-2xl font-medium text-gray-800">{price} руб</strong>
 							:
 							<div className="badge badge-accent badge-outline pl-1.5 mt-3">
-								 Уточняйте цену
+								Уточняйте цену
 							</div>
-					}
-					{
-						discount ? <span className="font-medium text-gray-500 line-through">{(price / 100 * discount) + price} руб</span>
-							: null
-					}
-					{
-						discount ?
-							<span className="text-green-500 text-sm font-semibold">-{discount}%</span>
-							: null
 					}
 				</div>
 				<div className="flex items-center gap-2 mt-4">
@@ -122,33 +117,23 @@ const ImgProductDetails = ({ product }) => {
 					<div className="relative bg-white p-8 rounded-lg max-w-2xl w-full">
 						<img
 							src={images[selectedImageIndex]}
-							alt=""
+							alt={name}
 							className="w-full h-full object-cover rounded-lg"
 						/>
-						<div className="absolute top-4 right-4 cursor-pointer" onClick={closeModal}>
+						<div className="absolute top-1/2 -translate-x-1/2 left-6 cursor-pointer" onClick={handlePrevImage}>
+							<BsChevronLeft className="text-3xl text-gray-700 hover:text-gray-900" />
+						</div>
+						<div className="absolute top-1/2 -translate-x-1/2 right-2 cursor-pointer" onClick={handleNextImage}>
+							<BsChevronRight className="text-3xl text-gray-700 hover:text-gray-900" />
+						</div>
+						<div className="absolute top-4 right-12 cursor-pointer" onClick={closeModal}>
 							<span className="text-3xl font-bold">✕</span>
 						</div>
 					</div>
 				</div>
 			)}
 
-			<dialog id="my_modal_3" className="modal">
-				<div className="modal-box">
-					<form method="dialog">
-						<button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
-					</form>
-					<h3 className="font-bold text-lg">Ваш заказ: csdcd</h3>
-					<h4 className="font-bold text-base">Cумма заказа:  руб</h4>
-					<p className="py-4 text-xs">Заполните, пожалуйста, данные формы, чтобы быстро оформить заказ.</p>
-					<div className="modal-action">
-						{/* <FormOrder product={product} closeModalOrder={closeModalOrder} /> */}
-
-					</div>
-					<p className="py-4 text-sm">
-						После получения вашего заказа мы перезвоним вам для подтверждения.
-					</p>
-				</div>
-			</dialog>
+			
 		</div>
 	)
 }

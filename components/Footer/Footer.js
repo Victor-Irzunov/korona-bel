@@ -1,7 +1,6 @@
 "use client"
 import { Link as LinkScroll } from 'react-scroll'
 
-
 export default function Footer() {
 	return (
 		<footer className="footer footer-center sd:pt-10 sd:pb-10 xz:pt-10 xz:pb-3 bg-base-200 text-base-content rounded" id='footer'>
@@ -30,9 +29,6 @@ export default function Footer() {
 					>
 						Каталог
 					</LinkScroll>
-
-
-
 					<LinkScroll to='garantiya'
 						smooth={true}
 						offset={-100}
@@ -43,8 +39,6 @@ export default function Footer() {
 					>
 						Гарантия
 					</LinkScroll>
-
-
 				</nav>
 				<nav>
 					<h6 className='mb-1 w-[60vw] font-semibold'>
@@ -122,8 +116,9 @@ export default function Footer() {
 					</p>
 				</aside>
 			</div>
-			<iframe src="https://yandex.ru/sprav/widget/rating-badge/83072948031?type=rating" width="150" height="50" frameborder="0"></iframe>
-			<iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A48422403e419eaf4cdfb98ae32f9b3e9f26f52f234de224073682756feede64e&amp;source=constructor" width="100%" height="400" frameBorder="0"></iframe>
+			<iframe src="https://yandex.ru/sprav/widget/rating-badge/83072948031?type=rating" width="150" height="50" frameBorder="0"></iframe>
+
+			<iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A68676e8b013dc7e5fb1e68e7de5e2a2f83eb3b32ce6e25d3f3c72bd120a37fa7&amp;source=constructor" width="100%" height="400" frameBorder="0"></iframe>
 
 			<div className='container mx-auto'>
 				<aside className="border-t pt-2">

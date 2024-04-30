@@ -158,10 +158,10 @@ export default function Header() {
 								Режим работы:
 							</p>
 							<p className=''>
-								8:30-17:15
+								10:00-20:00
 							</p>
 							<p className=''>
-								Выходной: <span className='text-red-500'>СБ</span>-<span className='text-red-500'>ВС</span>
+								<span className='text-green-600'>без выходных</span>
 							</p>
 						</div>
 						{/* <div className="dropdown dropdown-end">

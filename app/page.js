@@ -1,6 +1,8 @@
 import FormOrder from "@/components/Form/FormOrder";
 import BtnComp from "@/components/btn/BtnComp";
+import Cards from "@/components/cards/Cards";
 import Catalog from "@/components/catalog/Catalog";
+import Dostavka from "@/components/dostavka/Dostavka";
 import Garantiya from "@/components/garantiya/Garantiya";
 import ObratnyjZvonok from "@/components/obratnyjZvonok/ObratnyjZvonok";
 import SliderComp from "@/components/sliderComp/SliderComp";
@@ -20,27 +22,22 @@ export default function Home() {
             </p>
             <BtnComp />
           </div>
-
         </div>
       </section>
 
       <div className='container mx-auto'>
-
         <section className='bg-[#272727] rounded-tr-2xl rounded-sm flex sd:justify-between xz:justify-center sd:flex-row xz:flex-col sd:p-10 xz:p-5 mt-16'>
           <div className='sd:mb-0 xz:mb-7 mx-auto w-auto sd:hidden xz:block'>
             <Image src='/img.webp' alt='Продажа техники' width={320} height={320} className="rounded-tr-xl rounded-bl-xl" />
           </div>
-
           <div className=''>
             <p className='text-[#FF6736] sd:text-3xl xz:text-xl font-bold'>
               Вы сделали правильный выбор в пользу компании, которой доверяют
             </p>
-
             <div className='mt-7 text-white'>
               <p className='sd:text-base xz:text-sm'>
                 KORONA – производство снегоуборщиков, мотоблоков и генераторов. Также подходит для небольших дачных участков и средних фермерских хозяйств для вспашки земли, нарезки борозд, посадки, окучивания, сбора картошки, покоса травы, уборки снега и транспортировки грузов.
               </p>
-
             </div>
           </div>
           <div className='w-auto xz:hidden sd:block rounded-tr-xl rounded-bl-xl ml-4'>
@@ -51,44 +48,22 @@ export default function Home() {
           </div>
         </section>
 
-
         <SliderComp />
-
       </div>
-
-      {/* <div className='bg-gradient-to-r from-orange-600 to-orange-400 py-10 relative'>
-        <p className='text-center text-white uppercase text-4xl font-extrabold sd:w-[30%] xz:w-full mx-auto xz:px-5 sd:px-0 shadow-text'>
-          Получи 2 подарка при покупке мотоблока
-        </p>
-
-        <Image src='/gift.webp'
-          alt='Получи 2 подарка' width={130} height={130}
-          className="absolute top-1/2 left-16 -translate-y-1/2 sd:block xz:hidden"
-        />
-        <Image src='/gift.webp'
-          alt='Получи 2 подарка' width={130} height={130}
-          className="absolute top-1/2 right-16 -translate-y-1/2 sd:block xz:hidden"
-        />
-      </div> */}
-
-
+      
       <Catalog />
-
+      <Cards />
       <Garantiya />
-
+      <Dostavka />
       <ObratnyjZvonok />
-
-
 
       <dialog id="my_modal_1" className="modal">
         <div className="modal-box overflow-x-hidden">
           <form method="dialog">
-            {/* if there is a button in form, it will close the modal */}
             <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
           </form>
           <h3 className="font-bold text-lg">Заказать звонок</h3>
           <p className="py-4 text-sm text-gray-400">Пожалуйста введите свой номер телефона и мы вам перезвоним в ближайшее время</p>
-
           <div className="modal-action">
             <FormOrder zvonok />
           </div>

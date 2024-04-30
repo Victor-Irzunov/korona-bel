@@ -10,7 +10,7 @@ export const product = [
 					{
 						id: 1,
 						name: 'M-107',
-						price: 1135,
+						price: 1170,
 						discount:10,
 						images: [
 							'/product/motobloki/m-107-1.webp',
@@ -35,7 +35,7 @@ export const product = [
 					{
 						id: 2,
 						name: 'M-207',
-						price: 1176,
+						price: 1230,
 						discount:15,
 						images: [
 							'/product/motobloki/m-207-1.webp',
@@ -82,7 +82,7 @@ export const product = [
 					{
 						id: 4,
 						name: 'M-307',
-						price: 1236,
+						price: 1284,
 						discount:15,
 						images: [
 							'/product/motobloki/m-307-1.webp',
@@ -113,7 +113,7 @@ export const product = [
 					{
 						id: 1,
 						name: 'M-227',
-						price: 1404,
+						price: 1395,
 						discount:10,
 						images: [
 							'/product/motobloki/m-227-1.webp',
@@ -138,7 +138,7 @@ export const product = [
 					{
 						id: 2,
 						name: 'M-327',
-						price: 1424,
+						price: 1458,
 						discount:10,
 						images: [
 							'/product/motobloki/m-327-1.webp',
@@ -163,7 +163,7 @@ export const product = [
 					{
 						id: 3,
 						name: 'X-107',
-						price: 1206,
+						price: 1254,
 						discount:0,
 						images: [
 							'/product/motobloki/x-107-1.webp',
@@ -185,29 +185,6 @@ export const product = [
 							'Комплект пневматических колес 4.00-8.',
 						]
 					},
-					// {
-					// 	id: 4,
-					// 	name: 'X-137',
-					// 	images: [
-					// 		'/product/motobloki/x-137-1.webp',
-					// 		'/product/motobloki/x-137-2.webp',
-					// 		'/product/motobloki/x-137-3.webp'
-					// 	],
-					// 	alt: 'Мотоблок X-137',
-					// 	description: [
-					// 		'Мощность 7л.с.',
-					// 		'Объем двигателя 212 куб.см.',
-					// 		'Глубина вспашки– 35 см.',
-					// 		'Ширина вспашки– 90 см.',
-					// 		'Сцепление дисковое.',
-					// 		'Вал отбора мощности.',
-					// 		'Регулировка руля в 2-х плоскостях',
-					// 		'Корпус редуктора – аллюминий.',
-					// 		'3 группы (2+1) фрез по 4 ножа с каждой стороны.',
-					// 		'Скорости: 3 вперед, 1 назад.',
-					// 		'Комплект пневматических колес 4.00-8.',
-					// 	]
-					// },
 				],
 			},
 			{

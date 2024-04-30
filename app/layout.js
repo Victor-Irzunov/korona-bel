@@ -15,7 +15,7 @@ export default function RootLayout({ children }) {
     <html lang="ru">
       <head>
         <meta name="theme-color" content="#fff" />
-        <link rel="shortcut icon" href="/favicon/favicon.ico" />
+        {/* <link rel="shortcut icon" href="/favicon/favicon.ico" /> */}
         <meta name="google-site-verification" content="drBFWdRgRdIX-21trDJ1pyNLLwQsThL9_NPGMWF4Uvo" />
         <script
           dangerouslySetInnerHTML={{

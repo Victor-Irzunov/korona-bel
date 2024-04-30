@@ -3,8 +3,27 @@ import { Link as LinkScroll } from 'react-scroll'
 
 export default function Footer() {
 	return (
-		<footer className="footer footer-center sd:pt-10 sd:pb-10 xz:pt-10 xz:pb-3 bg-base-200 text-base-content rounded" id='footer'>
+		<footer className="footer footer-center relative sd:pt-10 sd:pb-10 xz:pt-10 xz:pb-3 bg-base-200 text-base-content rounded" id='footer'>
 			<div className='container mx-auto'>
+
+			<div className='absolute sd:right-3 xz:-right-1 sd:top-9 xz:top-28 cursor-pointer'>
+					<LinkScroll
+						to="main"
+						smooth={true}
+						offset={-100}
+						duration={800}
+						className="cursor-pointer"
+						rel="nofollow"
+						href='#/'
+					>
+						<p className='rotate-[270deg] font-light text-sm'>
+							Наверх →
+						</p>
+					</LinkScroll>
+				</div>
+
+
+
 				<nav className="grid grid-flow-col gap-4 mb-7">
 
 					<LinkScroll to='main'
@@ -38,6 +57,16 @@ export default function Footer() {
 						href='#/'
 					>
 						Гарантия
+					</LinkScroll>
+					<LinkScroll to='dostavka'
+						smooth={true}
+						offset={-100}
+						duration={800}
+						className="cursor-pointer"
+						rel="nofollow"
+						href='#/'
+					>
+						Доставка
 					</LinkScroll>
 				</nav>
 				<nav>
@@ -90,10 +119,10 @@ export default function Footer() {
 							Режим работы:
 						</p>
 						<p className=''>
-							8:30-17:15
+							10:00-20:00
 						</p>
 						<p className=''>
-							Выходной: <span className='text-red-500'>СБ</span>-<span className='text-red-500'>ВС</span>
+							 <span className='text-green-600'>без выходных</span>
 						</p>
 					</div>
 				</nav>
